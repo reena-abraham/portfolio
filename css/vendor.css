@@ -1152,12 +1152,15 @@
  * ------------------------------------------------------------------- */
 .modal-popup {
     max-width        : 680px;
+    /* height : auto; */
+    /* width: 40%; */
     background-color : white;
     font-size        : calc(var(--text-size) * 0.9447);
-    line-height      : var(--vspace-0_875);
+    /* line-height      : var(--vspace-0_875); */
     color            : rgba(0, 0, 0, 0.75);
     overflow-y       : auto;
     position         : relative;
+    /* overflow-y: scroll; */
 }
 
 .modal-popup img {
