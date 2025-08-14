@@ -239,72 +239,72 @@
 	contentWayPoint();
 
 	// magnific popup
-	$('.image-popup').magnificPopup({
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-     gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      verticalFit: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
-    }
-  });
+// 	$('.image-popup').magnificPopup({
+//     type: 'image',
+//     closeOnContentClick: true,
+//     closeBtnInside: false,
+//     fixedContentPos: true,
+//     mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+//      gallery: {
+//       enabled: true,
+//       navigateByImgClick: true,
+//       preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+//     },
+//     image: {
+//       verticalFit: true
+//     },
+//     zoom: {
+//       enabled: true,
+//       duration: 300 // don't foget to change the duration also in CSS
+//     }
+//   });
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
+//   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+//     disableOn: 700,
+//     type: 'iframe',
+//     mainClass: 'mfp-fade',
+//     removalDelay: 160,
+//     preloader: false,
 
-    fixedContentPos: false
-  });
+//     fixedContentPos: false
+//   });
 
 
 
  /* Lightbox
     * ------------------------------------------------------ */
- const ssLightbox = function() {
+//  const ssLightbox = function() {
 
-	const folioLinks = document.querySelectorAll('.folio-list__item-link');
-	const modals = [];
+// 	const folioLinks = document.querySelectorAll('.folio-list__item-link');
+// 	const modals = [];
 
-	folioLinks.forEach(function(link) {
-		let modalbox = link.getAttribute('href');
-		let instance = basicLightbox.create(
-			document.querySelector(modalbox),
-			{
-				onShow: function(instance) {
-					//detect Escape key press
-					document.addEventListener("keydown", function(event) {
-						event = event || window.event;
-						if (event.keyCode === 27) {
-							instance.close();
-						}
-					});
-				}
-			}
-		)
-		modals.push(instance);
-	});
+// 	folioLinks.forEach(function(link) {
+// 		let modalbox = link.getAttribute('href');
+// 		let instance = basicLightbox.create(
+// 			document.querySelector(modalbox),
+// 			{
+// 				onShow: function(instance) {
+					
+// 					document.addEventListener("keydown", function(event) {
+// 						event = event || window.event;
+// 						if (event.keyCode === 27) {
+// 							instance.close();
+// 						}
+// 					});
+// 				}
+// 			}
+// 		)
+// 		modals.push(instance);
+// 	});
 
-	folioLinks.forEach(function(link, index) {
-		link.addEventListener("click", function(event) {
-			event.preventDefault();
-			modals[index].show();
-		});
-	});
+// 	folioLinks.forEach(function(link, index) {
+// 		link.addEventListener("click", function(event) {
+// 			event.preventDefault();
+// 			modals[index].show();
+// 		});
+// 	});
 
-};  // end ssLightbox
+// };  
 
 
    /* Initialize
@@ -312,7 +312,7 @@
    (function ssInit() {
 
 
-	ssLightbox();
+	// ssLightbox();
 
 
 })();
