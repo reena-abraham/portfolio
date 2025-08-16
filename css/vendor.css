@@ -912,52 +912,87 @@
     position: absolute;
     top: 0px;
     left: 0;
-    font-size: 6vw;
+    font-size: 5vw;
     color: rgba(255, 255, 255, 0.1);
     z-index: -1;
     font-weight: 900;
 }
 
 #about-section {
+    background-color: #000;
     padding: 60px 0;
 }
 
-.profile-card {
-
-    background: #1f1f1f;
+#about-section h2 {
     color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+#about-section h2 span,
+#about-section .highlight,
+#about-section .text-warning {
+    color: #f1c40f;
+    /* golden yellow */
+}
+
+#about-section .profile-card {
+    background-color: #1e1e1e;
+    /* dark gray card */
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    margin: auto;
+    color: #fff;
+}
+
+#about-section .profile-card img {
+    border: 3px solid #f1c40f;
+    /* yellow border around profile pic */
+}
+
+#about-section .skills span {
+    background-color: transparent;
+    border: 1px solid #f1c40f;
+    color: #f1c40f;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
 }
 
 .profile-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(255, 193, 7, 0.3);
+    border-color: #f0a500;
 }
 
-.profile-pic {
-
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border: 3px solid #ffc107;
+.about-section .profile-pic {
+    max-width: 190px;
+    border: 4px solid #f0a500;
+    padding: 5px;
     border-radius: 50%;
-    margin-bottom: 15px;
 }
 
-.profile-pic:hover {
-    /* transform: rotate(3deg) scale(1.05); */
-    /* box-shadow: 0 0 25px rgba(255, 193, 7, 0.8); */
+.role {
+    font-size: 14px;
+    color: #aaa;
 }
 
-.profile-card p {
-    margin-bottom: 8px;
-    font-size: 15px;
+.skills-badges .badge {
+    display: inline-block;
+    background: #222;
+    color: #f0a500;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #f0a500;
+    transition: all 0.3s ease;
 }
 
+.skills-badges .badge:hover {
+    background: #f0a500;
+    color: #111;
+}
 
 .resume-section .experience-heading {
     text-align: center;
@@ -972,7 +1007,7 @@
 
 .section-title {
     /* text-align: center; */
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 10px;
     margin-top: 40px;
@@ -982,12 +1017,84 @@
     padding: 40px 0;
 }
 
-.section-title {
+/* .section-title {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #fff;
+} */
+
+.services-section {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
 }
+
+.section-subtitle {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-text {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Cards container */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Each card */
+.service-card {
+    background: #1e1e1e;
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Round icon */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: #ffb400;
+    /* accent color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle i {
+    font-size: 28px;
+    color: #121212;
+}
+
+.service-card h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
 
 
 @media (max-width: 768px) {
