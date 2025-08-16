@@ -1095,7 +1095,36 @@
     line-height: 1.6;
 }
 
+.tech-stack {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 12px;
+			margin-top: 20px;
+		}
 
+		.tech-stack span {
+			display: flex;
+			align-items: center;
+			border: 1px solid #f1c40f;
+			/* gold border */
+			padding: 6px 14px;
+			border-radius: 20px;
+			font-size: 14px;
+			background: transparent;
+			color: #fff;
+			/* default text color */
+			transition: 0.3s;
+		}
+
+		.tech-stack i {
+			font-size: 18px;
+			margin-right: 8px;
+		}
+
+		.tech-stack span:hover {
+			background: #f1c40f;
+			color: #000;
+		}
 
 @media (max-width: 768px) {
     .profile-card {
