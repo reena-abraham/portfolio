@@ -12686,6 +12686,26 @@ h5,
   color: #ffbd39;
 }
 
+/* Ensure all columns in the row have equal height */
+.row.equal-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Make each resume card stretch to the same height */
+.resume-wrap.experience-section {
+  background: #181818;
+  border-radius: 6px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 400px;  /* Set a fixed height suitable to fit content */
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
 .resume-wrap {
   width: 100%;
   margin-bottom: 30px;
@@ -12712,7 +12732,28 @@ h5,
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
+
+  margin-bottom: 15px; /* or adjust as needed */
+
+
 }
+
+
+.job-header {
+  display: flex;
+  justify-content: space-between; /* Pushes items to left and right edges */
+  align-items: center; /* Vertically center */
+}
+
+.job-header h3 {
+  margin: 0; /* remove default margin */
+}
+
+.job-header .date {
+  font-weight: 600; /* or your existing styling */
+  /* existing styles */
+}
+
 
 .services-1 {
   margin-bottom: 40px;
@@ -13604,6 +13645,22 @@ textarea.form-control {
     width: 100%;
   }
 }
+
+
+
+/* Mobile responsive: height auto */
+@media (max-width: 767px) {
+  .resume-wrap.experience-section {
+    height: auto;      /* let content decide height */
+    min-height: 200px; /* optional minimum height */
+    margin-bottom: 20px;
+  }
+  
+  .row.equal-height {
+    display: block; /* disable flex on mobile for proper stacking */
+  }
+}
+
 
 .block-9 .form-control {
   outline: none !important;
